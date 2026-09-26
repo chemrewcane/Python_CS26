@@ -1,6 +1,6 @@
 import math
 
-print(f"{"="*8} Probability Using Combinations {"="*8}")
+print(f"{"="*8} Probabilities via Combinatorics {"="*8}")
 
 total = int(input("Enter total number (e.g., 52): "))
 select = int(input("Enter number to be selected (e.g., 5): "))
