@@ -1,4 +1,4 @@
-print("--- SIMPLE NOTES MANAGER ---")
+print("=== SIMPLE NOTES MANAGER ===")
 
 while True:
     print("\n1. Add Note")
