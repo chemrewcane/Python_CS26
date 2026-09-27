@@ -2,18 +2,18 @@ import math
 
 print(f"{"="*8} Probabilities via Combinatorics {"="*8}")
 
-total = int(input("Enter total number (e.g., 52): "))
-select = int(input("Enter number to be selected (e.g., 5): "))
-sp = int(input("Enter number of special/favorable items (e.g., 4 aces): "))
-want = int(input("Enter wanted number (e.g., 2 aces): "))
+total = int(input("Enter total number: "))
+select = int(input("Enter number to randomly pick: "))
+look = int(input("Enter number of the type you're looking for: "))
+want = int(input("Enter number of the type you want: "))
 
 total_final = math.comb(total, select)
-special_final = math.comb(sp, want)
-not_special = math.comb(total - sp, select - want)
-fav = special_final * not_special
-prob = fav / total_final
+special_final = math.comb(look, want)
+not_special = math.comb(total - look, select - want)
+both = special_final * not_special
+prob = both / total_final
 
 print(f"\n{"="*8} RESULT {"="*8}")
 
 print("Total combinations:", total_final)
-print("Probability:", round(prob, 6))
+print(f"Probability: {prob:.5f}")
